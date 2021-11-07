@@ -1,0 +1,12 @@
+<%-include("layouts/header")%>
+
+<%-include("layouts/navlogin")%>
+
+<img class="imgFull" src="/uploads/<%= page.pageImageName %>" alt="<%= page.pageTitle %>">
+<main>
+    <h1><%= page.pageTitle%></h1>
+
+    <p><%- page.pageDescription%></p>
+</main>
+
+<%-include("layouts/footer")%>

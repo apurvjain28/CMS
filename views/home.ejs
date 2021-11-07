@@ -1,0 +1,34 @@
+<!-- displays the list of all the article saved in the database -->
+
+<%-include("layouts/header")%>
+
+<%-include("layouts/navlogin")%>
+
+<img class="imgFull" src="/images/main_home.jpg" alt="movies">
+<main>
+    <h1>List of top reviews</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Page</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%
+        for (var page of pages){
+            if(page.pageTitle == 'About' || page.pageTitle == 'Team' || page.pageTitle == 'Contact'){
+                continue;
+            }
+            %>
+            <tr>
+                <td><%= page.pageTitle %></td>
+                <td><a href="/preview/<%= page._id%>">Read</a></td>
+            </tr>
+            <%
+        }     
+        %>
+    </tbody>
+</table>
+</main>
+<%-include("layouts/footer")%>

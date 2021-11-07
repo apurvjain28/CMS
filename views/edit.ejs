@@ -1,0 +1,40 @@
+<!-- same as add page but with retrieved data from database -->
+
+<%-include("layouts/header")%>
+
+<%-include("layouts/navloginsuccess")%>
+<main>
+    <form name="myform" method="Post" action="" enctype="multipart/form-data">
+        <label for="pageTitle">Page Title</label>
+        <input type="text" id="pageTitle" name="pageTitle" value="<%= page.pageTitle%>"/>
+        <br/>
+
+        <label for="pageImage">page Image</label>
+        <input type="file" id="pageImage" name="pageImage"/>
+        <br/>
+
+        <label for="pageDescription">page Description</label>
+        <input type="text" id="pageDescription" name="pageDescription" value="<%= page.pageDescription%>"/>
+        <br/>
+
+        <div class="submission">
+            <input type="submit" value="Submit" />
+        </div> 
+    </form>   
+</main>
+
+<!-- google cdn for jquery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script src="/js/tinymce/jquery.tinymce.min.js"></script>
+<script src="/js/tinymce/tinymce.min.js"></script>
+<script>
+    tinymce.init({
+    selector: '#pageDescription',
+    height: 500,
+    menubar: false,
+});
+</script>
+
+
+<%-include("layouts/footer")%>

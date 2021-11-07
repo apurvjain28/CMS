@@ -1,0 +1,32 @@
+<%-include("layouts/header")%>
+
+<%-include("layouts/navlogin")%>
+<main>
+    <fieldset>
+        <legend>Login Details</legend>    
+        <form name="myform" method="Post" action="loginsuccess">
+            <label>Username</label>
+            <input id="username" type="text" name="username" /><br />
+        
+            <label>Password</label>
+            <input
+                id="password"
+                type="password"
+                name="password"
+            /><br />
+        
+            <input type="submit" value="Submit" />
+            <p id="errors">
+                <%
+                    if(typeof error !== 'undefined'){
+                        %>
+                            <%= error %>                
+                        <%
+                    }  
+                %>
+            </p>
+        </form> 
+    </fieldset>
+</main>
+
+<%-include("layouts/footer")%>

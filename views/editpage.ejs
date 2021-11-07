@@ -1,0 +1,45 @@
+<!-- Displays Home, About, Team, Contact and all the pages you add in database-->
+<!-- Team, Contact will be added without images, on WIZWIG  -->
+
+<!-- Two options:
+1. Edit: It opens link of addpage after retrieving data from database (reading id)
+2. delete: just delete from database -->
+
+<%-include("layouts/header")%>
+
+<%-include("layouts/navloginsuccess")%>
+
+<h1>Edit pages</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Page</th>
+            <th>Manage</th>
+            <th>Manage</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- 
+        Home page is listing page. It cannot be here.    
+        <tr>
+            <td>Home</td>
+            <td><a href="">Edit</a></td>
+            <td><a href="">Delete</a></td>
+        </tr> 
+        -->
+        <%
+        for (var page of pages){
+            %>
+            <tr>
+                <td><%= page.pageTitle %></td>
+                <td><a href="/edit/<%= page._id%>">Edit</a></td>
+                <td><a href="/delete/<%= page._id%>">Delete</a></td>
+            </tr>
+            <%
+        }     
+        %>
+    </tbody>
+</table>
+
+<%-include("layouts/footer")%>
