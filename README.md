@@ -1,8 +1,8 @@
 # CMS
 Content Management System
-
-This project was done as a part of the PROG8020.
 Development of a blog posting website with a custom Content Management System (CMS). The website/blog and CMS was built from scratch using HTML, CSS, JS, Node.js, EJS. The database was created using MongoDB. There was also use of third-party libraries like WYSIWYG.
+
+The project could be executed with Command: node index.js
 
 ![image](https://user-images.githubusercontent.com/54246887/140634619-47218bee-6bf4-4135-854a-cefc4fe8a9cf.png)
 
